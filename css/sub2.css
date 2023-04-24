@@ -1,0 +1,25 @@
+/* sub2.css */
+
+/* container */
+
+/* spot */
+.spot{background: url(../images/faq_visual_img.jpg) no-repeat 50% 0;color: #fff;}
+.spot_inner>h2{font-size: 46px;margin-bottom: 15px;}
+.spot_inner>p{font-size: 16px;color: #eee;}
+.spot_inner>p.path{position: absolute;bottom: 20px;right: 0;font-size: 14px;color: #ccc;}
+
+/* content */
+p.info_txt{text-align: right;margin-bottom: 10px;}
+
+table.job{width: 100%;margin-bottom: 10px;}
+.job th,.job td{height: 60px;border: 1px solid #ccc;text-align: center;}
+
+.job head th{border-top: 1px solid #000;background: #f3f3f3;font-size: 18px;}
+.job head th:first-of-type{width: 120px;border-left: none;}
+.job head th:nth-of-type(2){width: 640px;}
+.job head th:last-of-type{width: 380px;border-right: none;}
+
+.job tbody td{border-top: none;font-size: 16px;}
+.job tbody td:first-of-type{border-left: none;}
+.job tbody td:last-of-type{border-right: none;}
+.job tbody tr:last-of-type td{border-bottom: 1px solid #000;}
