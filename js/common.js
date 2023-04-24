@@ -1,11 +1,10 @@
 /*common.js*/ 
 window.addEventListener(`load`, () => {
-  const gnbMenu = document.querySelectorAll(".gnb>ul>li");
+const gnbMenu = document.querySelectorAll(".gnb>ul>li");
 const btnSrch = document.querySelector(".btn_srch");
 const srchWrap = document.querySelector(".srch_wrap");
 const srchClose = document.querySelector(".btn_srch_close");
 const headerWrap = document.querySelector(".header_wrap");
-console.log(srchClose);
 
 /*주메뉴*/
 // 각 li에 마우스를 올리면 (높이값 가져와서)풀다운 메뉴 내려오고 보여야 됨
@@ -55,12 +54,11 @@ srchClose.addEventListener(("click"), e => {
   e.preventDefault();
   srchWrap.style.display = "none"
 });
-})
 
 // top버튼
 // 클릭하면 스크롤이 맨위로 올라감
 const topBtn = document.querySelector(".btn_top");
-console.log(topBtn);
+// console.log(topBtn);
 
 topBtn.addEventListener("click",e=>{
   e.preventDefault();
@@ -88,3 +86,6 @@ window.addEventListener("scroll", () =>{
     topBtn.classList.add("on");
   }
 });
+
+})
+
