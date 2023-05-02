@@ -72,5 +72,54 @@ slideRolls.forEach((li,index) => {
   });
 });
 
+// 첫 페이지 스크롤 내릴때 각 요소들의 변화
+const newsroomTitle = document.querySelector('.newsroom_title');
+const newsroomContent = document.querySelector('.newsroom_content');
+const newsLetter = document.querySelector('.newsletter');
+const PRHALL = document.querySelector('.PRHALL');
+const productComponent = document.querySelector('.Product_component');
+const productModule = document.querySelector('.Product_module');
+const productCircle = document.querySelector('.Product_circle ');
 
+const elements = [
+  newsroomTitle,
+  newsroomContent,
+  newsLetter,
+  PRHALL,
+  productComponent,
+  productModule,
+  productCircle,
+];
+
+const elementFlags = {
+  newsroomTitle: false,
+  newsroomContent: false,
+  newsLetter: false,
+  PRHALL: false,
+  productComponent: false,
+  productModule: false,
+  productCircle: false,
+};
+
+const checkElementPosition = () => {
+  const scrollValue = window.scrollY;
+  const windowHeight = window.innerHeight;
+
+  elements.forEach((element) => {
+    const elementClassName = element.className;
+    const elementTop = element.offsetTop;
+    const elementHeight = element.offsetHeight;
+
+    if (
+      scrollValue + windowHeight >= elementTop + elementHeight &&
+      !elementFlags[elementClassName]
+    ) {
+      // console.log(`${elementClassName}에 도달했습니다.`);
+      element.classList.add("on");
+      elementFlags[elementClassName] = true;
+    }
+  });
+};
+
+window.addEventListener('scroll', checkElementPosition);
 
